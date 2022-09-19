@@ -1,0 +1,28 @@
+.main {
+  background-color: rgb(216, 216, 251);
+  height: 70vh;
+}
+
+.main_ttl {
+  text-align: center;
+  margin: auto;
+}
+
+.main_content {
+  margin: auto;
+  width: 20%;
+}
+
+.sub {
+  text-align: center;
+}
+
+.sub_ttl {
+  color: grey;
+  font-size: 12px;
+}
+
+.sub_register {
+  color: blue;
+  font-size: 12px;
+}
