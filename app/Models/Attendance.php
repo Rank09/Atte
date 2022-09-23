@@ -20,4 +20,8 @@ class Attendance extends Model
     {
         return $this->hasMany('App\Models\Rest');
     }
+
+protected $guarded = array('id');
+
+
 }

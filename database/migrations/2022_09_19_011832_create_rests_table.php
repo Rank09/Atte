@@ -18,8 +18,8 @@ class CreateRestsTable extends Migration
             $table->foreignId('attendance_id')->constrained('users');
             $table->time('start_time');
             $table->time('end_time');
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
