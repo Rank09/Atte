@@ -53,9 +53,7 @@ class AttendancedController extends Controller
 
     public function attendance()
     {
-        $user = Auth::user();
-        $item = ['user' => $user];
-        return view('attendance', $item);
+        return redirect('/');
     }
 
     public function add()

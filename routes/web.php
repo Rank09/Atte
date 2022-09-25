@@ -11,6 +11,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/attendance', [AttendancedController::class, 'list']);
     Route::post('/attendance/start', [AttendancedController::class, 'add']);
     Route::post('/attendance/end', [AttendancedController::class, 'save']);
+    Route::get('/rest', [RestController::class, 'rest']);
     Route::post('/rest/start', [RestController::class, 'add']);
     Route::post('/rest/end', [RestController::class, 'save']);
     Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
