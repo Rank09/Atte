@@ -21,6 +21,11 @@ class Attendance extends Model
         return $this->hasMany('App\Models\Rest');
     }
 
+    public function Detail(){
+        return 'ID' . $this->id . ':' . $this->title;
+    }
+
+
 protected $guarded = array('id');
 
 

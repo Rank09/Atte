@@ -35,11 +35,12 @@
     </div>
   </div>
   @foreach ($items as $item)
-  <li>{{$item->getDetail()}}</li>
+  {{$item->getDetail()}}
   @endforeach
 
-  {{$items->links()}}
-  <p>{{$user->name}}</p>
+  {{ $items->links() }}
+
+  <p>{{ Auth::user()->name }}</p>
 
 
 

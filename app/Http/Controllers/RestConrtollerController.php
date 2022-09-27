@@ -45,4 +45,12 @@ class RestController extends Controller
         
         return redirect('/');
         }
+
+    public function list(Request $request)
+    {
+        $items = rest::all();
+        return view('attendance', ['items' => $items]);
+    }
+
+
 }

@@ -53,7 +53,7 @@ class AttendancedController extends Controller
 
     public function attendance()
     {
-        return redirect('/');
+        return view('attendance');
     }
 
     public function add()
@@ -90,10 +90,7 @@ class AttendancedController extends Controller
         return redirect('/');
     }
 
-    public function list()
-    {
-        $items = Attendance::Paginate(5);
-        return view('attendance', ['items' => $items]);
-    }
+
+
 }
 
