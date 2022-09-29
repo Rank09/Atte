@@ -53,7 +53,8 @@ class AttendancedController extends Controller
 
     public function attendance()
     {
-        return view('attendance');
+        $items = Attendance::all();
+        return view('attendance', compact('items'));
     }
 
     public function add()
@@ -81,11 +82,7 @@ class AttendancedController extends Controller
         $date = $dt->toDateString();
         $time = $dt->toTimeString();
 
-        Attendance::create([
-            'user_id' => $id,
-            'date' => $date,
-            'end_time' => $time
-        ]);
+        Attendance::where('user_id', $id)->where('date', $date)->update(['end_time' => $time]);
 
         return redirect('/');
     }

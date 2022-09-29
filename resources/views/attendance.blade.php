@@ -34,11 +34,10 @@
       <div></div>
     </div>
   </div>
-  @foreach ($items as $item)
-  {{$item->getDetail()}}
-  @endforeach
 
-  {{ $items->links() }}
+  @foreach ($items as $item)
+  {{$item}}
+  @endforeach
 
   <p>{{ Auth::user()->name }}</p>
 

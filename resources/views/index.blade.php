@@ -52,24 +52,24 @@
     @endif
 
     @if(isset($is_rest_start))
-    <form action="" method="post" class="main_content-common">
+    <form action="/rest/start" method="post" class="main_content-common">
       @csrf
       <input type="submit" id="start_time" class="main_content-button" name="start_time" value="休憩開始">
     </form>
     @else
-    <form action="" method="post" class="main_content-common">
+    <form action="/rest/start" method="post" class="main_content-common">
       @csrf
       <input type="submit" id="start_time" class="main_content-button" name="start_time" value="休憩開始" disabled>
     </form>
     @endif
 
     @if(isset($is_rest_end))
-    <form action="" method="post" class="main_content-common">
+    <form action="/rest/end" method="post" class="main_content-common">
       @csrf
       <input type="submit" id="end_time" class="main_content-button" name="end_time" value="休憩終了">
     </form>
     @else
-    <form action="" method="post" class="main_content-common">
+    <form action="/rest/end" method="post" class="main_content-common">
       @csrf
       <input type="submit" id="end_time" class="main_content-button" name="end_time" value="休憩終了" disabled>
     </form>
