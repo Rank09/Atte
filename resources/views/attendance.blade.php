@@ -17,30 +17,48 @@
     <p class="login_header">Atte</p>
     <ul class="login_header_list">
       <li class="login_header_list-item"><a href="/">ホーム</a></li>
-      <li class="login_header_list-item"><a href="/attendance">日付</a></li>
+      <li class="login_header_list-item"><a href="/attendance/0">日付</a></li>
       <li class="login_header_list-item"><a href="/logout">ログアウト</a></li>
     </ul>
     </nav>
   </div>
   <div class="main">
-    <div class="main_date">
-      <ul class="main_category">
-        <li class="main_category-ttl">名前</li>
-        <li class="main_category-ttl">勤務開始</li>
-        <li class="main_category-ttl">勤務終了</li>
-        <li class="main_category-ttl">休憩時間</li>
-        <li class="main_category-ttl">勤務時間</li>
-      </ul>
-      <div></div>
+    <div class="date-container">
+      <a class="arrow" href="{!! '/attendance/' . ($num - 1) !!}">&lt;</a>
+      <p class="date">{{ $fixed_date }}</p>
+      <a class="arrow" href="{!! '/attendance/' . ($num + 1) !!}">&gt;</a>
     </div>
+
+    <table class="main_date">
+      <tr class="main_category">
+        <th class="main_category-ttl">名前</th>
+        <th class="main_category-ttl">勤務開始</th>
+        <th class="main_category-ttl">勤務終了</th>
+        <th class="main_category-ttl">休憩時間</th>
+        <th class="main_category-ttl">勤務時間</th>
+      </tr>
+      @foreach($attendances as $attendance)
+      <tr>
+        <td>
+          {{ $attendance->users->name }}
+        </td>
+        <td>
+          {{ $attendance->start_time }}
+        </td>
+        <td>
+          {{ $attendance->end_time }}
+        </td>
+        <td>
+          {{ $attendance->rest_sum }}
+        </td>
+        <td>
+          {{ $attendance->work_time }}
+        </td>
+      </tr>
+      @endforeach
+    </table>
   </div>
-
-  @foreach ($items as $item)
-  {{$item}}
-  @endforeach
-
-  <p>{{ Auth::user()->name }}</p>
-
+  
 
 
   <div class="common_footer">

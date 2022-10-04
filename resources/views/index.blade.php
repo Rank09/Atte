@@ -18,7 +18,7 @@
     <p class="login_header">Atte</p>
     <ul class="login_header_list">
       <li class="login_header_list-item"><a href="/">ホーム</a></li>
-      <li class="login_header_list-item"><a href="/attendance">日付</a></li>
+      <li class="login_header_list-item"><a href="/attendance/0">日付</a></li>
       <li class="login_header_list-item"><a href="/logout">ログアウト</a></li>
     </ul>
     </nav>

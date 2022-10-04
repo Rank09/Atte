@@ -13,7 +13,7 @@ class Attendance extends Model
 
     public function users()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\User', "user_id");
     }
 
     public function rests()
@@ -25,8 +25,8 @@ class Attendance extends Model
         return 'ID' . $this->id . ':' . $this->title;
     }
 
-
 protected $guarded = array('id');
+
 
 
 }
