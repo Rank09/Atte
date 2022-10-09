@@ -136,6 +136,10 @@ class AttendancedController extends Controller
         return view('attendance', compact('attendances', 'fixed_date', 'num'));
     }
 
+        public function page(){
+        $attendances =  Attendance::Paginate(4);
+        return view('attendance', ['attendances' => $attendances]);
+    }
 
     
 }

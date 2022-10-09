@@ -38,27 +38,28 @@
         <th class="main_category-ttl">勤務時間</th>
       </tr>
       @foreach($attendances as $attendance)
-      <tr>
-        <td>
+      <tr class="main_category">
+        <td class="main_category-ttl">
           {{ $attendance->users->name }}
         </td>
-        <td>
+        <td class="main_category-ttl">
           {{ $attendance->start_time }}
         </td>
-        <td>
+        <td class="main_category-ttl">
           {{ $attendance->end_time }}
         </td>
-        <td>
+        <td class="main_category-ttl">
           {{ $attendance->rest_sum }}
         </td>
-        <td>
+        <td class="main_category-ttl">
           {{ $attendance->work_time }}
         </td>
       </tr>
       @endforeach
     </table>
   </div>
-  
+
+  {{ $attendances->links() }}
 
 
   <div class="common_footer">
