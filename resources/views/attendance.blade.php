@@ -58,9 +58,9 @@
       @endforeach
     </table>
   </div>
-
+  <td class="main_page">
   {{ $attendances->links() }}
-
+  </td>
 
   <div class="common_footer">
     <p class="login_footer">Atte,inc.</p>
